@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+/* Header */
+header{
+    background: #ffffff;
+    border-bottom: solid 1px gainsboro;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+#logoText{
+    width: 180px;
+    margin-top: 8px;
+    margin-left: 20px; 
+}
+.navbar{
+    align-self: center;
+}
+.navbar a{
+    width: auto;
+    text-decoration: none;
+    color: #011627ff;;
+    font-size: 22px;
+    padding: 13px;
+}
+#activeNav{
+    color: #09e007ff;
+}
+.login{
+    margin-right: 2vw;
+    align-self: center;
+}
+.ham{
+    display: none;
+}
+.login button{
+    color: #f6f7f8;
+    font-size:18px;
+    background: #09e007ff;
+    border-radius: 24px;
+    border: none;
+    height: 30px;
+    width: 88px;
+}
+.login button:hover{
+    box-shadow: 0 0 15px #09e007ff;
+    color:#09e007ff;
+    background: #011627ff;
+    transition-duration: 400ms;
+}
+
+/* RESPONSIVE HEADER */
+@media (max-width: 768px){
+    #logoText{
+        display: block;
+        margin: auto;
+        margin-top: 4px;
+    }
+    .hamberger{
+        border-bottom: solid 1px gainsboro;
+        display: flex;
+    }
+    .ham{
+        display: block;
+        position: fixed;
+        align-self: center;
+        left: 15px;
+    }
+    header{
+        display: inline;
+    }
+    .navbar{
+        display: none;
+        margin: 0;
+        text-align: center;
+    }
+    .navbar a{
+        background: #f6f7f8ff;
+        display: block;
+    }
+    .login{
+        display: none;
+        border: none;
+        text-align: center; 
+    }
+    
+}
+/* FOOTER */
+footer{
+    display: flex;
+    justify-content: space-around;
+    background: #ffffff;
+    padding: 12px;
+    border-top: solid 1px gainsboro;
+}
+footer p{
+    font-size: large;
+    color: #09e007ff;
+}

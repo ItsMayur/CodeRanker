@@ -1,0 +1,33 @@
+#contactBox{
+    border-top: solid 1px gainsboro;
+}
+.contact{
+    justify-content: space-evenly;
+    background-color: #f6f7f8;
+    margin: 15vh;
+    margin-top: 3vh;
+    display: flex;
+    border-radius: 70px;
+    box-shadow: 0 0 20px #09e007ff;
+}
+.contact div{
+    font-size: 1rem;
+    margin: 5rem;
+}
+#contactText{
+    margin: 2rem;
+    text-align: center;
+}
+.contactLocation{
+    width: 20vw;
+}
+.contactLinks{
+    width: 20vw;
+}
+.contactIcons{
+    color: #09e007ff;
+}
+
+/* RESPONSIVE*/
+@media (max-width: 768px){
+}
