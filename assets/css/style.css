@@ -1,11 +1,70 @@
+@font-face {
+    font-family: 'dosisbold';
+    src: url('../fonts/dosis-bold-webfont.woff2') format('woff2'),
+         url('../fonts/dosis-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'dosisextrabold';
+    src: url('../fonts/dosis-extrabold-webfont.woff2') format('woff2'),
+         url('../fonts/dosis-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'dosisextralight';
+    src: url('../fonts/dosis-extralight-webfont.woff2') format('woff2'),
+         url('../fonts/dosis-extralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'dosislight';
+    src: url('../fonts/dosis-light-webfont.woff2') format('woff2'),
+         url('../fonts/dosis-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'dosismedium';
+    src: url('../fonts/dosis-medium-webfont.woff2') format('woff2'),
+         url('../fonts/dosis-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'dosisregular';
+    src: url('../fonts/dosis-regular-webfont.woff2') format('woff2'),
+         url('../fonts/dosis-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'dosissemibold';
+    src: url('../fonts/dosis-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/dosis-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 *{
+    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     margin: 0%;
     padding: 0%;
 }
+h1{
+    font-family: dosisregular,Arial, Helvetica, sans-serif;
+}
+h2{
+    font-family: "dosisregular";
+}
+.container{
+    margin: 10vw;
+}
 /* Header */
 header{
-    background: #ffffff;
+    background: #f6f7f8ff;
     border-bottom: solid 1px gainsboro;
     height: fit-content;
     display: flex;
@@ -14,7 +73,7 @@ header{
     top: 0;
 }
 #logoText{
-    width: 180px;
+    width: 170px;
     margin-top: 8px;
     margin-left: 20px; 
 }
@@ -24,8 +83,8 @@ header{
 .navbar a{
     width: auto;
     text-decoration: none;
-    color: #011627ff;;
-    font-size: 22px;
+    color: #011627ff;
+    font-size: 20px;
     padding: 13px;
 }
 #activeNav{
@@ -69,13 +128,26 @@ header{
         display: block;
         position: fixed;
         align-self: center;
-        left: 15px;
+        left: 90vw;
+        border: solid 1px #011627ff;
+        border-radius: 4px;
+    }
+    .ham i{
+        margin: 4px;
     }
     header{
         display: inline;
+        position: fixed;
+        width: 100vw;
     }
-    .navbar{
+    .hamToggle{
         display: none;
+    }
+    .hamToggleShow{
+        display: block;
+    }
+    
+    .navbar{
         margin: 0;
         text-align: center;
     }
@@ -84,21 +156,151 @@ header{
         display: block;
     }
     .login{
-        display: none;
+        margin: 10px;
         border: none;
         text-align: center; 
     }
     
 }
+/* HeroBox */
+.heroBox{
+    height: 70vh;
+    display: flex;
+    justify-content: space-between;
+}
+.heroContent{
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+}
+#heroGS{
+    font-size: 3rem;
+    color: #09e007ff;
+}
+#heroCS{
+    color: #011627ff;
+}
+#heroBtn{
+    width: 160px;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color:#028f00;
+    margin-top: 24px;
+    padding: 16px;
+    color: white;
+}
+.heroBox img{
+    width: 40vw;
+}
+/*RESPONSIVE HeroBox */
+@media (max-width: 768px){
+    .heroBox{
+        text-align: center;
+        margin: 20vw;
+        margin-top: 10vh;
+        flex-direction: column;
+    }
+    #heroGS{
+        font-size: 2rem;
+    }
+    #heroCS{
+        font-size: 1.5rem;
+    }
+    #heroBtn{
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .heroContent{
+        width: auto;
+    }
+    .heroBox img{
+        width: auto;
+    }
+}
+
+/* SERVICES */
+#services{
+    text-align: center;
+    margin-top: 25vh;
+}
+.ourServices{
+    display: flex;
+    justify-content: center;
+}
+
+.serviceTabs{
+    border: solid 1px #011627ff;
+    border-radius: 20px;
+    margin: 1vw;
+    padding: 1vw;
+    text-align: center;
+}
+.serviceTabs:hover{
+    padding: 2vw;
+    margin: 0;
+    background-color: #011627ff;
+    transition-duration: 400ms;
+    color: #09e007ff;
+}
+.serviceTabs img{
+    width: 18vw;
+    height: 20vw;
+    margin: 1vw;
+}
+.serviceTabs p{
+    font-size: larger;
+}
+
+/* CONTACT */
+#contactBox{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.contact{
+    font-size: large;
+    color: #f6f7f8ff;
+    margin-top: 2vh;
+    text-align: left;
+    display: flex;
+    background-color: #011627ff;
+    border-radius: 40px;
+}
+.contactIcons{
+    color: #09e007ff;
+    font-size: 3em;
+}
+.contact div{
+    margin: 4vw;
+    padding: 2rem;
+}
+.contact div h2{
+    color: #09e007ff;
+    font-weight: lighter;
+}
+/*RESPONSIVE CONTACT */
+@media (max-width: 768px){
+    #contactBox{
+        margin-top: 10vh;
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+    }
+    .contactIcons{
+        font-size: 2em;
+    }
+}
 /* FOOTER */
 footer{
     display: flex;
-    justify-content: space-around;
-    background: #ffffff;
-    padding: 12px;
-    border-top: solid 1px gainsboro;
+    justify-content : space-around;
+    background : #f6f7f8ff;
+    padding : 12px;
+    border-top : solid 1px gainsboro;
 }
 footer p{
     font-size: large;
-    color: #09e007ff;
+    color: #011627ff;
 }
